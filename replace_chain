@@ -1,0 +1,116 @@
+{
+    "chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2020-05-19 23:57:03.637768",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "2e66ff851883bd595f2b7f88f12da00f86f743d6911720244da1fb7e7a7fef18",
+            "proof": 533,
+            "timestamp": "2020-05-20 00:10:18.376576",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "d0cf4f28379ec17417a60392234f38a201c85234789db62875e94ae3f6cd5ff5",
+            "proof": 45293,
+            "timestamp": "2020-05-20 00:12:57.779765",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        }
+    ],
+    "length": 3
+}
+
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2020-05-19 23:57:03.637768",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "2e66ff851883bd595f2b7f88f12da00f86f743d6911720244da1fb7e7a7fef18",
+            "proof": 533,
+            "timestamp": "2020-05-20 00:10:18.376576",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "d0cf4f28379ec17417a60392234f38a201c85234789db62875e94ae3f6cd5ff5",
+            "proof": 45293,
+            "timestamp": "2020-05-20 00:12:57.779765",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        }
+    ]
+}
+
+{
+    "message": "The nodes had different chains so the chain was replaced by the longest one.",
+    "new_chain": [
+        {
+            "index": 1,
+            "previous_hash": "0",
+            "proof": 1,
+            "timestamp": "2020-05-19 23:57:03.637768",
+            "transactions": []
+        },
+        {
+            "index": 2,
+            "previous_hash": "2e66ff851883bd595f2b7f88f12da00f86f743d6911720244da1fb7e7a7fef18",
+            "proof": 533,
+            "timestamp": "2020-05-20 00:10:18.376576",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "previous_hash": "d0cf4f28379ec17417a60392234f38a201c85234789db62875e94ae3f6cd5ff5",
+            "proof": 45293,
+            "timestamp": "2020-05-20 00:12:57.779765",
+            "transactions": [
+                {
+                    "amount": 1,
+                    "receiver": "Elio",
+                    "sender": "17ddf4b13e4a419f98d4bf4cece4b37c"
+                }
+            ]
+        }
+    ]
+}
