@@ -138,9 +138,9 @@ def is_valid():
     return jsonify(response), 200
 
 #adding a new transaction to a blockchain
-@app.route('/add_transaction', methods = ['GET'])
+@app.route('/add_transaction', methods = ['POST'])
 def add_transaction():
-    json = requests.get_json()
+    json = request.get_json()
     transaction_keys = ['sender', 'receiver', 'amount']
     if not all (key in json for key in transaction_keys):
         return 'Some elements of the transaction are missing', 400
@@ -149,6 +149,19 @@ def add_transaction():
     return jsonify(response), 201
 
 #Part 3 - Decentralising our Blockchain
+    
+#Connecting new Nodes
+@app.route('/connect_node', methods = ['POST'])
+def connect_node():
+    json = request.get_json()
+    nodes = json.get('nodes')
+    if nodes is None:
+        return "No Node", 400
+    for node in nodes:
+        blockchain.add_node(nodes)
+    response = {'message' : 'All the nodes are now connected. The Hellcoin BlockChain now contains the following nodes:',
+                'total_nodes' : list(blockchain.nodes)}
+    return jsonify(response), 201
 
 #Running the App
 app.run(host = '0.0.0.0', port = 5000)    
