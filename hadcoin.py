@@ -111,7 +111,7 @@ def mine_block():
     proof = blockchain.proof_of_work(previous_proof)
     previous_hash = blockchain.hash(previous_block)
     block = blockchain.create_block(proof, previous_hash)
-    blockchain.add_transaction(sender = node_address, receiver = 'Hadelin', amount = 1)
+    blockchain.add_transaction(sender = node_address, receiver = 'Elio', amount = 1)
     response = {'message':'Congratulations, you just mined a block!',
                 'index': block['index'],
                 'timestamp': block['timestamp'], 
@@ -136,6 +136,17 @@ def is_valid():
     else:
         response = {'message' : 'Elio, we have a problem. The blockchain is not valid.'}
     return jsonify(response), 200
+
+#adding a new transaction to a blockchain
+@app.route('/add_transaction', methods = ['GET'])
+def add_transaction():
+    json = requests.get_json()
+    transaction_keys = ['sender', 'receiver', 'amount']
+    if not all (key in json for key in transaction_keys):
+        return 'Some elements of the transaction are missing', 400
+    index = blockchain.add_transaction(json['sender'], json['receiver'], json['amount'])
+    response = {'message': f'This transaction will be added to Block {index}'}
+    return jsonify(response), 201
 
 #Part 3 - Decentralising our Blockchain
 
