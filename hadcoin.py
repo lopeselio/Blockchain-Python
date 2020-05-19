@@ -2,7 +2,10 @@
 import datetime
 import hashlib
 import json
-from flask import Flask, jsonify
+from flask import Flask, jsonify, request
+import requests
+from uuid import uuid4
+from urllib.parse import urlparse
 
 # Part 1 - Building a Blockchain
 class Blockchain:
@@ -95,6 +98,8 @@ def is_valid():
     else:
         response = {'message' : 'Elio, we have a problem. The blockchain is not valid.'}
     return jsonify(response), 200
+
+#Part 3 - Decentralising our Blockchain
 
 #Running the App
 app.run(host = '0.0.0.0', port = 5000)    
